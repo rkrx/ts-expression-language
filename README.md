@@ -54,8 +54,14 @@ A small sandbox language for filtering and transforming data
 import {ExpressionLanguage, Environment} from 'https://raw.githubusercontent.com/rkrx/ts-expression-language/master/mod.ts';
 
 const el = new ExpressionLanguage();
-const result = el.prepare('1 + 1').execute(new Environment());
-console.log(result); // 2
+
+const env = new Environment();
+env.addFunction('rand', (min: number, max: number) => Math.random() * (max - min) + min);
+env.addFunction('min', (actual: number, minimumValue: number) => actual < minimumValue ? minimumValue : actual);
+env.addFunction('max', (actual: number, maximumValue: number) => actual > maximumValue ? maximumValue : actual);
+env.addFunction('round', (value: number, decimals: number) => Math.round(value));
+
+console.log(el.prepare('rand(-25, 50) |> round() |> min(0) |> max(25)').execute(env));
 ```
 
 ## License
