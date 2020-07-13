@@ -51,7 +51,7 @@ A small sandbox language for filtering and transforming data
 ## How to use it?
 
 ```typescript
-import {ExpressionLanguage, Environment} from 'https://deno.land/x/gh:rkrx:ts-expression-language/mod.ts';
+import {ExpressionLanguage, Environment} from 'https://raw.githubusercontent.com/rkrx/ts-expression-language/master/mod.ts';
 
 const el = new ExpressionLanguage();
 const result = el.prepare('1 + 1').execute(new Environment());
