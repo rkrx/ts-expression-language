@@ -44,7 +44,7 @@ export const terminals: TerminalDefinition[] = [
     {id: Term.True, pattern: 'true', converter: () => true},
     {id: Term.False, pattern: 'false', converter: () => false},
     {id: Term.Null, pattern: 'null', converter: () => null},
-    {id: Term.Float, pattern: /^\d*\.\d+/, converter: value => parseFloat(value)},
+    {id: Term.Float, pattern: /^[0-9]*\.[0-9]+(?:[eE][-+]?[0-9]+)?/, converter: value => eval(value)},
     {id: Term.Int, pattern: /^\d+/, converter: value => parseInt(value)},
     {id: Term.Identifier, pattern: /^[a-zA-Z_]+\b/},
     {id: Term.StringA, pattern: /^(?:".*?(?<!\\(?:\\\\)*)")/, converter: value => value.substring(1, value.length - 1).replaceAll(/\\(.)/g, (_, matches) => replaceSpecialCharacters(matches[0]))},

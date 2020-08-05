@@ -26,7 +26,7 @@ A small sandbox language for filtering and transforming data
 - [ ] Numbers
   - [x] Integers (`1234`, `-1234`)
   - [x] Floats (`1.23`, `-1.23`)
-  - [ ] Exponential-numbers (e.g. 3.14E+3 or 1e-2)
+  - [x] Exponential-numbers (e.g. 3.14E+3 or 1e-2)
 - [ ] Strings
   - [x] Basic strings with escapting (`"Hello \"world\""`, `'Hello \'world\''`)
   - [ ] String interpolation (`"Hello ${who}"`)
