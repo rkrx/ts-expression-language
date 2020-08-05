@@ -1,4 +1,7 @@
 # ts-expression-language
+
+[![Build Status](https://travis-ci.org/rkrx/ts-expression-language.svg?branch=master)](https://travis-ci.org/rkrx/ts-expression-language)
+
 A small sandbox language for filtering and transforming data
 
 ## Status

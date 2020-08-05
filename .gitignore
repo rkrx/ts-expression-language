@@ -2,6 +2,7 @@
 !/src
 !/tests
 !/.gitignore
+!/.travis.yml
 !/LICENSE
 !/mod.ts
 !/README.md
