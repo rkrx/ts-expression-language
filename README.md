@@ -61,7 +61,7 @@ env.addFunction('min', (actual: number, minimumValue: number) => actual < minimu
 env.addFunction('max', (actual: number, maximumValue: number) => actual > maximumValue ? maximumValue : actual);
 env.addFunction('round', (value: number, decimals: number) => Math.round(value));
 
-console.log(el.prepare('rand(-25, 50) |> round() |> min(0) |> max(25)').execute(env));
+console.log(el.compile('rand(-25, 50) |> round() |> min(0) |> max(25)').execute(env));
 ```
 
 ## License

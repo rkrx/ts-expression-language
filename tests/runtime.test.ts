@@ -16,8 +16,7 @@ const macro = (proc: string, vars: object = {}) => {
     env.addFunction('add', (...values: number[]) => values.reduce((acc, v) => acc + v, 0));
     env.addFunction('div', (value, divisor) => value / divisor);
     env.addFunction('pow', (value, exponent) => Math.pow(value, exponent));
-    const result = new Runtime(ast).execute(env);
-    return result;
+    return new Runtime(ast).execute(env);
 }
 
 Deno.test({

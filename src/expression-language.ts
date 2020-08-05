@@ -14,7 +14,7 @@ export class ExpressionLanguage {
         this.parser = new Parser(rules);
     }
     
-    prepare(src: string): Runtime {
+    compile(src: string): Runtime {
         const stream = this.tokenizer.tokenize(src);
         const ast = this.parser.parse(rules.program.rule, stream);
         return new Runtime(ast);
